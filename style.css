@@ -1,0 +1,54 @@
+html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::after, *::before {
+    box-sizing: inheritance;
+}
+
+.box    {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 0 92%;
+    max-width: 1000px;
+}
+div {
+    display: flex;
+}
+.green  {
+    background-color: green;
+    width: 20%;
+    margin-left: 5%;
+
+}
+.blue   {
+    background: blue;
+    width: 20%;
+    margin-left: 5%;
+}
+.yellow {
+    background: yellow;
+    width: 20%;
+    margin-left: 5%;
+}
+.red    {
+    background: red;
+    width: 20%;
+    height: 50px;
+    margin-left: 5%;
+}
+/* tablet*/
+@media only screen and (min-width: 480px)    {
+    .blue,.green, .red,.yellow   {
+        flex: 0 0 44%;
+    }
+}
+/* Desktop*/
+@media only screen and (min-width: 768px)    {
+    .blue,.red,.yellow   {
+        flex: 0 0 92%;
+    }
+}
